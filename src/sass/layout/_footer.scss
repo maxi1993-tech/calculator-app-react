@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+    font-size: $font-size-footer;
+    text-align: center;
+
+    a {
+        color: $footer-link-color;
+    }
+}

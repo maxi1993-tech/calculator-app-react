@@ -1,5 +1,9 @@
 @use "base/reset";
-@use "base/body";
 @use "base/typography";
-@use "base/utilities";
+@use "base/body";
+
 @use "themes/themes";
+
+@use "layout/footer";
+
+@use "base/utilities";
