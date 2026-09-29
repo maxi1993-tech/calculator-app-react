@@ -2,6 +2,8 @@ import { useState } from "react"
 import "./_calculator.scss"
 import Header from "../Header/Header"
 import Display from "../Display/Display"
+import Keypad from "../Keypad/Keypad"
+import { calculatorKeys } from "../../data/calculatorKeys"
 
 function Calculator() {
     const [display, setDisplay] = useState("0")
@@ -16,6 +18,7 @@ function Calculator() {
             <Header />
             <main className="calculator__main">
                 <Display display={display} />
+                <Keypad keys={calculatorKeys} />
             </main>
         </div>
     )

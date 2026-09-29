@@ -18,3 +18,4 @@ export const calculatorKeys = [
     { label: "RESET", action: "reset" },
     { value: "=", action: "equals" },
 ]
+

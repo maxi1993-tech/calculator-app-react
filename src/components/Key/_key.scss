@@ -1,0 +1,52 @@
+@use "../../sass/abstracts/variables" as *;
+
+.key {
+    height: $key-height;
+
+    background-color: var(--key-bg);
+    color: var(--key-text);
+
+    font-size: $font-size-key;
+    border-radius: $radius-key;
+
+    box-shadow: 0 4px 0 var(--key-shadow);
+
+    transition:
+        transform 60ms ease,
+        box-shadow 60ms ease;
+
+    &:active {
+        transform: translateY(4px);
+        box-shadow: 0 0 0 var(--key-shadow);
+    }
+
+    &--delete,
+    &--reset {
+        background-color: var(--key-secondary-bg);
+        color: var(--key-secondary-text);
+        box-shadow: 0 4px 0 var(--key-secondary-shadow);
+
+        font-size: $font-size-key-small;
+
+        &:active {
+            box-shadow: 0 0 0 var(--key-secondary-shadow);
+        }
+    }
+
+    &--equals {
+        background-color: var(--key-equals-bg);
+        color: var(--key-equals-text);
+        box-shadow: 0 4px 0 var(--key-equals-shadow);
+
+        font-size: $font-size-key-small;
+
+        &:active {
+            box-shadow: 0 0 0 var(--key-equals-shadow);
+        }
+    }
+
+    &--reset,
+    &--equals {
+        grid-column: span 2;
+    }
+}

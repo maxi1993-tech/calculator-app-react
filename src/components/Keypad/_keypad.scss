@@ -1,0 +1,11 @@
+@use "../../sass/abstracts/variables" as *;
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $keypad-gap;
+    background-color: var(--keypad-bg);
+    border-radius: $radius-base;
+    padding-block: $keypad-padding-block;
+    padding-inline: $keypad-padding-inline;
+}
