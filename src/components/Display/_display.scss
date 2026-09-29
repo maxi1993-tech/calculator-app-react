@@ -1,0 +1,18 @@
+@use "../../sass/abstracts/variables" as *;
+
+.display {
+    display: block;
+    height: $display-height;
+    background-color: var(--display-bg);
+    padding-inline: $display-padding-inline;
+    border-radius: $radius-base;
+    min-width: 0;
+    width: 100%;
+    font-size: $font-size-display;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    letter-spacing: $letter-spacing-tight;
+    line-height: $display-height;
+}

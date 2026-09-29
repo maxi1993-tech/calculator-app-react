@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "./_calculator.scss"
 import Header from "../Header/Header"
+import Display from "../Display/Display"
 
 function Calculator() {
     const [display, setDisplay] = useState("0")
@@ -13,7 +14,9 @@ function Calculator() {
     return (
         <div className="calculator">
             <Header />
-            <main className="calculator__main"></main>
+            <main className="calculator__main">
+                <Display display={display} />
+            </main>
         </div>
     )
 }
