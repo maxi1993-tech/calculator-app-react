@@ -1,0 +1,64 @@
+@use "../../sass/abstracts/variables" as *;
+
+.theme-switcher {
+    display: flex;
+    align-items: flex-end;
+    gap: $theme-label-selector-gap;
+
+    &__label {
+        padding-bottom: 0.3125rem;
+        font-size: $font-size-theme;
+        letter-spacing: $letter-spacing-theme;
+        text-transform: uppercase;
+    }
+
+    &__selector {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $theme-scale-toggle-gap;
+    }
+
+    &__numbers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        width: $toggle-width;
+
+        font-size: $font-size-theme;
+        letter-spacing: $letter-spacing-theme;
+        text-align: center;
+    }
+
+    &__options {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        width: $toggle-width;
+        height: $toggle-height;
+
+        background-color: var(--toggle-bg);
+        border-radius: $radius-theme;
+    }
+
+    &__option {
+        appearance: none;
+
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+        margin: 0;
+
+        background-color: transparent;
+        border-radius: $radius-round;
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: 2px solid var(--toggle-dot);
+        }
+
+        &:checked {
+            background-color: var(--toggle-dot);
+        }
+    }
+}

@@ -63,6 +63,17 @@ select {
     font: inherit;
 }
 
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+fieldset {
+    min-inline-size: 0;
+}
+
 html {
     font-size: 100%;
     overflow-x: hidden;
