@@ -1,6 +1,14 @@
+import { useState } from "react"
 import "./_theme-switcher.scss"
 
 function ThemeSwitcher() {
+    const [theme, setTheme] = useState("dark")
+
+    function handleThemeChange(event) {
+        const value = event.target.value
+        setTheme(value)
+        document.documentElement.dataset.theme = value
+    }
 
     return (
         <fieldset className="theme-switcher">
@@ -31,13 +39,13 @@ function ThemeSwitcher() {
                         Dark theme
                     </label>
 
-                    <input
+                    <input onChange={handleThemeChange}
                         className="theme-switcher__option"
                         type="radio"
                         id="theme-dark"
                         name="theme"
                         value="dark"
-                        defaultChecked
+                        checked={theme === "dark"}
                     />
 
                     <label
@@ -47,12 +55,13 @@ function ThemeSwitcher() {
                         Light theme
                     </label>
 
-                    <input
+                    <input onChange={handleThemeChange}
                         className="theme-switcher__option"
                         type="radio"
                         id="theme-light"
                         name="theme"
                         value="light"
+                        checked={theme === "light"}
                     />
 
                     <label
@@ -62,12 +71,13 @@ function ThemeSwitcher() {
                         Purple theme
                     </label>
 
-                    <input
+                    <input onChange={handleThemeChange}
                         className="theme-switcher__option"
                         type="radio"
                         id="theme-purple"
                         name="theme"
                         value="purple"
+                        checked={theme === "purple"}
                     />
                 </div>
             </div>
