@@ -20,6 +20,10 @@
         box-shadow: 0 0 0 var(--key-shadow);
     }
 
+    &:hover {
+        background-color: var(--key-active);
+    }
+
     &--delete,
     &--reset {
         background-color: var(--key-secondary-bg);
@@ -30,6 +34,10 @@
 
         &:active {
             box-shadow: 0 0 0 var(--key-secondary-shadow);
+        }
+
+        &:hover {
+            background-color: var(--key-secondary-active);
         }
     }
 
@@ -42,6 +50,10 @@
 
         &:active {
             box-shadow: 0 0 0 var(--key-equals-shadow);
+        }
+
+        &:hover {
+            background-color: var(--key-equals-active);
         }
     }
 
