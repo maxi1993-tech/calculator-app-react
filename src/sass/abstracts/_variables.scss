@@ -1,0 +1,117 @@
+// =========================================================
+// VARIABLES
+// Couleurs : liste de Max (style-guide.md), inchangée.
+// Tailles : relevées dans le fichier Figma calculator-app
+// (mobile 375 px, desktop 1440 px), converties avec fluid().
+// Fichier proposé par l'IA, à relire avant intégration.
+// =========================================================
+
+@use "functions" as *;
+
+// Breakpoints
+// Mêmes largeurs que $view-min et $view-max de _functions.scss.
+$mobile: 375px;
+$desktop: 1440px;
+
+// Theme 1
+$navy-850: hsl(222, 26%, 31%);
+$navy-900: hsl(223, 31%, 20%);
+$navy-950: hsl(224, 36%, 15%);
+$navy-700: hsl(225, 21%, 49%);
+$navy-800: hsl(224, 28%, 35%);
+$navy-750: hsl(221, 14%, 31%);
+$red-600: hsl(6, 63%, 50%);
+$red-800: hsl(6, 70%, 34%);
+
+// Theme 2
+$gray-300: hsl(0, 5%, 81%);
+$gray-100: hsl(0, 0%, 93%);
+$gray-900: hsl(60, 10%, 19%);
+$gray-orange-450: hsl(35, 11%, 61%);
+$blue-500: hsl(185, 42%, 37%);
+$blue-600: hsl(185, 58%, 25%);
+$orange-700: hsl(25, 98%, 40%);
+$orange-800: hsl(25, 99%, 27%);
+
+// Theme 3
+$purple-950: hsl(268, 75%, 9%);
+$purple-900: hsl(268, 71%, 12%);
+$purple-850: hsl(268, 47%, 21%);
+$purple-800: hsl(281, 89%, 26%);
+$purple-750: hsl(290, 70%, 36%);
+$purple-400: hsl(285, 91%, 52%);
+$cyan-500: hsl(176, 100%, 44%);
+$cyan-400: hsl(177, 92%, 70%);
+$yellow-300: hsl(52, 100%, 62%);
+$blue-950: hsl(198, 20%, 13%);
+
+// Shared
+$gray-200: hsl(0, 0%, 90%);
+$gray-orange-400: hsl(28, 16%, 65%);
+$white: hsl(0, 100%, 100%);
+$footer: hsl(228, 45%, 44%);
+
+// Active states
+$blue-400: hsl(185, 40%, 56%);
+$orange-400: hsl(25, 100%, 61%);
+$red-400: hsl(6, 93%, 67%);
+$navy-400: hsl(225, 51%, 76%);
+$purple-650: hsl(280, 56%, 44%);
+$purple-700: hsl(268, 54%, 44%);
+$cyan-200: hsl(176, 100%, 79%);
+
+// ---------------------------------------------------------
+// Typography
+// Figma : presets League Spartan Bold, line-height 100 %.
+// ---------------------------------------------------------
+$font-family: "League Spartan", sans-serif;
+$font-weight-bold: 700;
+$line-height: 1;
+
+$font-size-title: 2rem; // « calc » : 32 / 32
+$font-size-themes: 0.75rem; // THEME, 1 2 3 : 12 / 12
+$font-size-display: fluid(40, 56); // nombre de l'écran : 40 / 56
+$font-size-key: fluid(32, 40); // chiffres et opérateurs : 32 / 40
+$font-size-key-small: fluid(20, 28); // DEL, RESET, = : 20 / 28
+
+// Figma : -0.3 px à -1 px selon la taille, soit environ -0.0175em partout.
+$letter-spacing-tight: -0.0175em;
+// Figma : 1 px sur les textes de 12 px (THEME, 1 2 3).
+$letter-spacing-themes: 1px;
+
+// ---------------------------------------------------------
+// Spacing
+// Figma : échelle spacing/100 = 8, /200 = 16, /300 = 24, /400 = 32.
+// ---------------------------------------------------------
+$page-padding-top: fluid(32, 98); // haut de page : 32 / 98
+$page-padding-x: 1.5rem; // côtés en mobile : 24
+$container-max-width: 33.75rem; // 540 en desktop
+$gap-blocks: 1.5rem; // en-tête, écran, clavier : 24 / 24
+
+$gap-theme: 1rem; // THEME ↔ sélecteur : 16 / 16
+$gap-theme-selector: 0.5rem; // chiffres 1 2 3 ↔ bouton : 8 / 8
+
+$display-height: fluid(88, 128); // 88 / 128
+$display-padding-x: fluid(24, 32); // 24 / 32
+
+$keypad-padding: fluid(18, 32) fluid(19.5, 32); // 18 × 19.5 / 32 × 32
+$gap-keys: fluid(16, 24); // 16 / 24
+
+// ---------------------------------------------------------
+// Sizes
+// ---------------------------------------------------------
+$key-height: 4rem; // 64 / 64
+$toggle-width: 4.25rem; // 68 / 68
+$toggle-height: 1.625rem; // 26 / 26
+$toggle-dot: 1rem; // 16 / 16
+
+// ---------------------------------------------------------
+// Radius (valeurs de la version JS, non relevées dans Figma)
+// ---------------------------------------------------------
+$radius-base: 10px;
+$radius-theme: 13px;
+$radius-theme-choices: 50%;
+$radius-key: 5px;
+
+// Shadow
+$shadow-key: inset 0 -4px 0;
