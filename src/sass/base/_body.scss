@@ -1,0 +1,7 @@
+@use "../abstracts/variables" as *;
+
+body {
+    min-height: 100dvh;
+    background-color: var(--page-bg);
+    color: var(--text);
+}
