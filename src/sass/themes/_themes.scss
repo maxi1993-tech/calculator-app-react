@@ -1,0 +1,91 @@
+// =========================================================
+// THÈMES
+// Repris de la version JS de Max, avec les décisions de la planche :
+// - thème par défaut sur :root (dark = thème 1)
+// - ordre : dark, light, purple
+// - noms alignés sur les classes (.key, .key--delete/--reset, .key--equals,
+//   .display, .keypad, .theme-switcher)
+// - ombres du thème purple corrigées d'après le style guide
+// Fichier proposé par l'IA, à relire avant intégration.
+// =========================================================
+
+@use "../abstracts/variables" as *;
+
+// Thème 1 (par défaut)
+:root,
+[data-theme="dark"] {
+    --page-bg: #{$navy-850};
+    --display-bg: #{$navy-950};
+    --keypad-bg: #{$navy-900};
+    --toggle-bg: #{$navy-900};
+    --toggle-dot: #{$red-600};
+    --toggle-dot-active: #{$red-400};
+    --text: #{$white};
+
+    --key-bg: #{$gray-200};
+    --key-shadow: #{$gray-orange-400};
+    --key-text: #{$navy-750};
+    --key-active: #{$white};
+
+    --key-secondary-bg: #{$navy-700};
+    --key-secondary-shadow: #{$navy-800};
+    --key-secondary-text: #{$white};
+    --key-secondary-active: #{$navy-400};
+
+    --key-equals-bg: #{$red-600};
+    --key-equals-shadow: #{$red-800};
+    --key-equals-text: #{$white};
+    --key-equals-active: #{$red-400};
+}
+
+// Thème 2
+[data-theme="light"] {
+    --page-bg: #{$gray-200};
+    --display-bg: #{$gray-100};
+    --keypad-bg: #{$gray-300};
+    --toggle-bg: #{$gray-300};
+    --toggle-dot: #{$orange-700};
+    --toggle-dot-active: #{$orange-400};
+    --text: #{$gray-900};
+
+    --key-bg: #{$gray-200};
+    --key-shadow: #{$gray-orange-400};
+    --key-text: #{$gray-900};
+    --key-active: #{$white};
+
+    --key-secondary-bg: #{$blue-500};
+    --key-secondary-shadow: #{$blue-600};
+    --key-secondary-text: #{$white};
+    --key-secondary-active: #{$blue-400};
+
+    --key-equals-bg: #{$orange-700};
+    --key-equals-shadow: #{$orange-800};
+    --key-equals-text: #{$white};
+    --key-equals-active: #{$orange-400};
+}
+
+// Thème 3
+[data-theme="purple"] {
+    --page-bg: #{$purple-950};
+    --display-bg: #{$purple-900};
+    --keypad-bg: #{$purple-900};
+    --toggle-bg: #{$purple-900};
+    --toggle-dot: #{$cyan-500};
+    --toggle-dot-active: #{$cyan-200};
+    --text: #{$yellow-300};
+
+    --key-bg: #{$purple-850};
+    --key-shadow: #{$purple-750}; // corrigé : purple-400 dans la version JS
+    --key-text: #{$yellow-300};
+    --key-active: #{$purple-700};
+
+    --key-secondary-bg: #{$purple-800};
+    --key-secondary-shadow: #{$purple-400}; // corrigé : purple-750 dans la version JS
+    --key-secondary-text: #{$white};
+    --key-secondary-active: #{$purple-650};
+
+    --key-equals-bg: #{$cyan-500};
+    --key-equals-shadow: #{$cyan-400};
+    --key-equals-text: #{$blue-950};
+    --key-equals-active: #{$cyan-200};
+}
