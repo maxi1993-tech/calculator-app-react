@@ -1,6 +1,8 @@
+import { calculatorKeys } from "./data/calculatorKeys"
+
 function App() {
 
-  return null
+  return <Calculator />
 }
 
 export default App

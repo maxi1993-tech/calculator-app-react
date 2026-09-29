@@ -1,0 +1,16 @@
+@use "../../sass/abstracts/variables" as *;
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-blocks;
+    width: 100%;
+    max-width: $container-max-width;
+    margin-inline: auto;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-blocks;
+    }
+}
