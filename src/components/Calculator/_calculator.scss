@@ -3,14 +3,19 @@
 .calculator {
     display: flex;
     flex-direction: column;
-    gap: $gap-blocks;
-    width: 100%;
-    max-width: $container-max-width;
+    gap: $calculator-gap;
+
+    width: $calculator-width;
     margin-inline: auto;
+    padding-block: $calculator-padding-block-mobile;
 
     &__main {
         display: flex;
         flex-direction: column;
-        gap: $gap-blocks;
+        gap: $calculator-gap;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-block: $calculator-padding-block-tablet;
     }
 }
