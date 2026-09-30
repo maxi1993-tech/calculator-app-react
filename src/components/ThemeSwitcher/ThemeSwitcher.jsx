@@ -1,13 +1,27 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./_theme-switcher.scss"
 
+function getPreferredTheme() {
+
+    const saveTheme = localStorage.getItem("theme")
+
+    if (saveTheme !== null) return saveTheme
+
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark"
+    return "light"
+}
+
 function ThemeSwitcher() {
-    const [theme, setTheme] = useState("dark")
+    const [theme, setTheme] = useState(getPreferredTheme())
+
+    useEffect(() => {
+        localStorage.setItem("theme", theme)
+        document.documentElement.dataset.theme = theme
+    }, [theme])
 
     function handleThemeChange(event) {
         const value = event.target.value
         setTheme(value)
-        document.documentElement.dataset.theme = value
     }
 
     return (
