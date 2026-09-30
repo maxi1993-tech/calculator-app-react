@@ -43,7 +43,25 @@ function useCalculator() {
         }
     }
 
-    function handleEquals() { }
+    function handleEquals() {
+
+        if (operator === null) return
+
+        let result
+
+        if (lastOperator === "=") {
+            result = calculate(display, operator, lastOperand)
+        } else {
+            result = calculate(accumulator, operator, display)
+            setLastOperand(display)
+        }
+
+        setAccumulator(result)
+        setDisplay(String(result))
+        setLastOperator("=")
+        setShouldResetDisplay(true)
+    }
+
     function handleDelete() { }
     function handleReset() { }
 
