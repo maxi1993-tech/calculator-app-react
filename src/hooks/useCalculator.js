@@ -1,4 +1,5 @@
 import { useState } from "react"
+import calculate from "../utils/calculate"
 
 function useCalculator() {
     const [display, setDisplay] = useState("0")
@@ -19,6 +20,7 @@ function useCalculator() {
     }
 
     function handleDecimal() {
+
         if (shouldResetDisplay === true) {
             setDisplay("0.")
             setShouldResetDisplay(false)
@@ -27,7 +29,20 @@ function useCalculator() {
         }
     }
 
-    function handleOperator(nextOperator) { }
+    function handleOperator(nextOperator) {
+
+        setAccumulator(display)
+        setOperator(nextOperator)
+        setLastOperator(nextOperator)
+        setShouldResetDisplay(true)
+
+        if (operator && shouldResetDisplay === false && lastOperator !== "=") {
+            const result = calculate(accumulator, operator, display)
+            setAccumulator(result)
+            setDisplay(String(result))
+        }
+    }
+
     function handleEquals() { }
     function handleDelete() { }
     function handleReset() { }
