@@ -9,6 +9,8 @@ function useCalculator() {
     const [lastOperator, setLastOperator] = useState(null)
     const [shouldResetDisplay, setShouldResetDisplay] = useState(false)
 
+    const [angerCount, setAngerCount] = useState(0)
+
     function handleDigit(digit) {
 
         if (shouldResetDisplay === true || display === "0") {
@@ -41,6 +43,7 @@ function useCalculator() {
 
             if (!Number.isFinite(result)) {
                 setDisplay("Can't divide by 0")
+                setAngerCount(angerCount + 1)
                 return
             }
 
@@ -64,6 +67,7 @@ function useCalculator() {
 
         if (!Number.isFinite(result)) {
             setDisplay("Can't divide by 0")
+            setAngerCount(angerCount + 1)
             return
         }
 
