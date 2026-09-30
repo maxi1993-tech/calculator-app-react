@@ -1,0 +1,84 @@
+// =========================================================
+// COLÈRE
+// Couleurs de la calculatrice qui s'énerve, une par valeur de angerCount
+// (data-anger sur <html>). 0 et 1 : pas de bloc, le thème s'applique.
+// Placé après themes/themes dans main.scss : à spécificité égale,
+// le dernier bloc lu l'emporte sur [data-theme="..."].
+// Valeurs reprises du design « Angry Calculator ».
+// Fichier écrit par l'IA, à la demande de Max.
+// =========================================================
+
+[data-anger="2"] {
+    --page-bg: #473e55;
+    --display-bg: #1f1b2b;
+    --keypad-bg: #2e283a;
+    --toggle-bg: #2e283a;
+    --text: #ffffff;
+
+    --key-bg: #ecdfd8;
+    --key-shadow: #b79f92;
+    --key-text: #484450;
+
+    --key-secondary-bg: #6b688a;
+    --key-secondary-shadow: #464766;
+}
+
+[data-anger="3"] {
+    --page-bg: #543647;
+    --display-bg: #261723;
+    --keypad-bg: #382331;
+    --toggle-bg: #382331;
+    --text: #ffffff;
+
+    --key-bg: #efdbd4;
+    --key-shadow: #bc9a8e;
+    --key-text: #4d3e47;
+
+    --key-secondary-bg: #73617e;
+    --key-secondary-shadow: #4b4059;
+}
+
+[data-anger="4"] {
+    --page-bg: #602d39;
+    --display-bg: #2c121a;
+    --keypad-bg: #421e27;
+    --toggle-bg: #421e27;
+    --text: #ffffff;
+
+    --key-bg: #f1d7d0;
+    --key-shadow: #c09589;
+    --key-text: #51373d;
+
+    --key-secondary-bg: #7a5971;
+    --key-secondary-shadow: #51384d;
+}
+
+[data-anger="5"] {
+    --page-bg: #6d252b;
+    --display-bg: #330e12;
+    --keypad-bg: #4c191e;
+    --toggle-bg: #4c191e;
+    --text: #ffffff;
+
+    --key-bg: #f4d3cc;
+    --key-shadow: #c59085;
+    --key-text: #563134;
+
+    --key-secondary-bg: #825265;
+    --key-secondary-shadow: #563140;
+}
+
+[data-anger="6"] {
+    --page-bg: #7a1d1d;
+    --display-bg: #3a0a0a;
+    --keypad-bg: #561414;
+    --toggle-bg: #561414;
+    --text: #ffffff;
+
+    --key-bg: #f6cfc8;
+    --key-shadow: #c98b80;
+    --key-text: #5a2a2a;
+
+    --key-secondary-bg: #8a4a58;
+    --key-secondary-shadow: #5c2a34;
+}
