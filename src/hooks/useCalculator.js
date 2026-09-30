@@ -56,6 +56,11 @@ function useCalculator() {
             setLastOperand(display)
         }
 
+        if (!Number.isFinite(result)) {
+            setDisplay("Can't divide by 0")
+            return
+        }
+
         setAccumulator(result)
         setDisplay(String(result))
         setLastOperator("=")
@@ -88,7 +93,19 @@ function useCalculator() {
     }
 
     function handleKey(value, action) {
-        console.log(value, action)
+
+        if (display === "Can't divide by 0") {
+            resetCalculator()
+
+            if (action === "digit") {
+                setDisplay(value)
+            }
+
+            if (action === "decimal") {
+                setDisplay("0.")
+            }
+            return
+        }
 
         if (action === "reset") {
 
