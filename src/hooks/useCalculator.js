@@ -73,7 +73,19 @@ function useCalculator() {
         }
     }
 
-    function handleReset() { }
+    function resetCalculator() {
+        setDisplay("0")
+        setAccumulator(null)
+        setLastOperand(null)
+        setOperator(null)
+        setLastOperator(null)
+        setShouldResetDisplay(false)
+    }
+
+    function handleReset() {
+
+        resetCalculator()
+    }
 
     function handleKey(value, action) {
         console.log(value, action)
