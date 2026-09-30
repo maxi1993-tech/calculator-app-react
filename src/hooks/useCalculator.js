@@ -62,7 +62,17 @@ function useCalculator() {
         setShouldResetDisplay(true)
     }
 
-    function handleDelete() { }
+    function handleDelete() {
+
+        const shortened = display.slice(0, -1)
+
+        if (shortened === "") {
+            setDisplay("0")
+        } else {
+            setDisplay(shortened)
+        }
+    }
+
     function handleReset() { }
 
     function handleKey(value, action) {
