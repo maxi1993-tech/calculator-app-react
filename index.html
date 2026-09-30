@@ -12,6 +12,18 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 
   <title>Frontend Mentor | Calculator app</title>
+  <script>
+    function getPreferredTheme() {
+
+      const saveTheme = localStorage.getItem("theme")
+
+      if (saveTheme !== null) return saveTheme
+
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark"
+      return "light"
+    }
+    document.documentElement.dataset.theme = getPreferredTheme()
+  </script>
 </head>
 
 <body>
