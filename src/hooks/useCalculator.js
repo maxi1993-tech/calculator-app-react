@@ -159,7 +159,7 @@ function useCalculator() {
         }
     }
 
-    return { display, handleKey }
+    return { display, handleKey, angerCount }
 }
 
 export default useCalculator

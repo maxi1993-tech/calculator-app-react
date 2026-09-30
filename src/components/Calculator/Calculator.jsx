@@ -4,9 +4,14 @@ import Display from "../Display/Display"
 import Keypad from "../Keypad/Keypad"
 import { calculatorKeys } from "../../data/calculatorKeys"
 import useCalculator from "../../hooks/useCalculator"
+import { useEffect } from "react"
 
 function Calculator() {
-    const { display, handleKey } = useCalculator()
+    const { display, handleKey, angerCount } = useCalculator()
+
+    useEffect(() => {
+        document.documentElement.dataset.anger = angerCount
+    }, [angerCount])
 
     return (
         <div className="calculator">
