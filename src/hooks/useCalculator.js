@@ -18,7 +18,15 @@ function useCalculator() {
         }
     }
 
-    function handleDecimal() { }
+    function handleDecimal() {
+        if (shouldResetDisplay === true) {
+            setDisplay("0.")
+            setShouldResetDisplay(false)
+        } else if (!display.includes(".")) {
+            setDisplay(display + ".")
+        }
+    }
+
     function handleOperator(nextOperator) { }
     function handleEquals() { }
     function handleDelete() { }
