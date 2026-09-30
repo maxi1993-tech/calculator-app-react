@@ -43,7 +43,13 @@ function useCalculator() {
 
             if (!Number.isFinite(result)) {
                 setDisplay("Can't divide by 0")
-                setAngerCount(angerCount + 1)
+
+                if (angerCount === 6) {
+                    setAngerCount(0)
+                } else {
+                    setAngerCount(angerCount + 1)
+                }
+
                 return
             }
 
@@ -67,7 +73,13 @@ function useCalculator() {
 
         if (!Number.isFinite(result)) {
             setDisplay("Can't divide by 0")
-            setAngerCount(angerCount + 1)
+
+            if (angerCount === 6) {
+                setAngerCount(0)
+            } else {
+                setAngerCount(angerCount + 1)
+            }
+
             return
         }
 
@@ -145,8 +157,6 @@ function useCalculator() {
 
             handleDecimal(value)
         }
-
-
     }
 
     return { display, handleKey }
