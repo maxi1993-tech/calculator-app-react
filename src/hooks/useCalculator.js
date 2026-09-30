@@ -38,6 +38,12 @@ function useCalculator() {
 
         if (operator && shouldResetDisplay === false && lastOperator !== "=") {
             const result = calculate(accumulator, operator, display)
+
+            if (!Number.isFinite(result)) {
+                setDisplay("Can't divide by 0")
+                return
+            }
+
             setAccumulator(result)
             setDisplay(String(result))
         }
