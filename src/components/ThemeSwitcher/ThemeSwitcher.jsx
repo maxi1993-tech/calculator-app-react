@@ -15,13 +15,13 @@ function ThemeSwitcher() {
     const [theme, setTheme] = useState(getPreferredTheme())
 
     useEffect(() => {
-        localStorage.setItem("theme", theme)
         document.documentElement.dataset.theme = theme
     }, [theme])
 
     function handleThemeChange(event) {
         const value = event.target.value
         setTheme(value)
+        localStorage.setItem("theme", value)
     }
 
     return (
