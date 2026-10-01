@@ -110,6 +110,7 @@ function useCalculator() {
     }
 
     function handleDelete() {
+        if (shouldResetDisplay === true) return
 
         const shortened = display.slice(0, -1)
 
