@@ -1,0 +1,10 @@
+.mouth {
+    display: grid;
+    place-items: center;
+
+    &__message {
+        color: var(--text);
+        font-size: 18px;
+        line-height: 1;
+    }
+}
