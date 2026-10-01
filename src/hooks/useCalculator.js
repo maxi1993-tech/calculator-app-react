@@ -1,6 +1,16 @@
 import { useState } from "react"
 import calculate from "../utils/calculate"
 
+const angerMessages = [
+    "Can't divide by 0",
+    "Can't divide by 0",
+    "Again? Cute.",
+    "Math not your thing?",
+    "Zero. Still zero. Genius.",
+    "Did you skip school?!",
+    "BACK TO KINDERGARTEN!"
+]
+
 function useCalculator() {
     const [display, setDisplay] = useState("0")
     const [accumulator, setAccumulator] = useState(null)
@@ -44,17 +54,20 @@ function useCalculator() {
 
             if (!Number.isFinite(result)) {
                 setIsError(true)
-                setDisplay("Can't divide by 0")
+
+                let nextCount
 
                 if (angerCount === 6) {
-                    setAngerCount(0)
+                    nextCount = 0
                 } else {
-                    setAngerCount(angerCount + 1)
+                    nextCount = angerCount + 1
                 }
+
+                setAngerCount(nextCount)
+                setDisplay(angerMessages[nextCount])
 
                 return
             }
-
             setAccumulator(result)
             setDisplay(String(result))
         }
@@ -75,13 +88,17 @@ function useCalculator() {
 
         if (!Number.isFinite(result)) {
             setIsError(true)
-            setDisplay("Can't divide by 0")
+
+            let nextCount
 
             if (angerCount === 6) {
-                setAngerCount(0)
+                nextCount = 0
             } else {
-                setAngerCount(angerCount + 1)
+                nextCount = angerCount + 1
             }
+
+            setAngerCount(nextCount)
+            setDisplay(angerMessages[nextCount])
 
             return
         }
