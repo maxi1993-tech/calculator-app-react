@@ -5,6 +5,7 @@ import Keypad from "../Keypad/Keypad"
 import { calculatorKeys } from "../../data/calculatorKeys"
 import useCalculator from "../../hooks/useCalculator"
 import { useEffect } from "react"
+import Horns from "../Horns/Horns"
 
 function Calculator() {
     const { display, handleKey, angerCount } = useCalculator()
@@ -15,6 +16,7 @@ function Calculator() {
 
     return (
         <div className="calculator">
+            <Horns angerCount={angerCount} />
             <Header />
             <main className="calculator__main">
                 <Display display={display} />
