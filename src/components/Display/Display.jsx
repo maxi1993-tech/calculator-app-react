@@ -1,11 +1,11 @@
 import "./_display.scss"
 import Eyes from "../Eyes/Eyes"
 
-function Display({ display, isError }) {
+function Display({ display, isError, angerCount }) {
 
-    if (isError) {
+    if (isError && angerCount >= 2) {
         return <output className="display">
-            <Eyes />
+            <Eyes angerCount={angerCount} />
             <span className="sr-only">{display}</span>
         </output>
     }

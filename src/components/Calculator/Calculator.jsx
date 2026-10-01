@@ -19,7 +19,7 @@ function Calculator() {
             <Horns angerCount={angerCount} />
             <Header />
             <main className="calculator__main">
-                <Display display={display} isError={isError} />
+                <Display display={display} isError={isError} angerCount={angerCount} />
                 <Keypad keys={calculatorKeys} handleKey={handleKey} />
             </main>
         </div>
