@@ -180,7 +180,7 @@ function useCalculator() {
         }
     }
 
-    return { display, handleKey, angerCount }
+    return { display, handleKey, angerCount, isError }
 }
 
 export default useCalculator

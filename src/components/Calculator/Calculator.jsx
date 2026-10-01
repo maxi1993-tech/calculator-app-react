@@ -8,7 +8,7 @@ import { useEffect } from "react"
 import Horns from "../Horns/Horns"
 
 function Calculator() {
-    const { display, handleKey, angerCount } = useCalculator()
+    const { display, handleKey, angerCount, isError } = useCalculator()
 
     useEffect(() => {
         document.documentElement.dataset.anger = angerCount
@@ -19,7 +19,7 @@ function Calculator() {
             <Horns angerCount={angerCount} />
             <Header />
             <main className="calculator__main">
-                <Display display={display} />
+                <Display display={display} isError={isError} />
                 <Keypad keys={calculatorKeys} handleKey={handleKey} />
             </main>
         </div>
